@@ -244,7 +244,7 @@ void CHL2MP_Player::PickDefaultSpawnTeam( void )
 				{
 					char szReturnString[512];
 
-					Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel models/player/ct_sas.mdl\n" );
+					Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel models/humans/group03/female_01.mdl\n" );
 					engine->ClientCommand ( edict(), szReturnString );
 				}
 
@@ -372,7 +372,7 @@ void CHL2MP_Player::SetPlayerTeamModel( void )
 
 	if ( modelIndex == -1 || ValidatePlayerModel( szModelName ) == false )
 	{
-		szModelName = "models/player/ct_sas.mdl";
+		szModelName = "models/humans/group03/female_01.mdl";
 		m_iModelType = TEAM_COMBINE;
 
 		char szReturnString[512];
@@ -406,7 +406,7 @@ void CHL2MP_Player::SetPlayerTeamModel( void )
 		m_iModelType = TEAM_REBELS;
 	}
 	
-	SetModel( "models/player/ct_sas.mdl" );
+	SetModel( "models/humans/group03/female_01.mdl" );
 	SetupPlayerSoundsByModel( szModelName );
 
 	m_flNextModelChangeTime = gpGlobals->curtime + MODEL_CHANGE_INTERVAL;
@@ -425,7 +425,7 @@ void CHL2MP_Player::SetPlayerModel( void )
 
 		if ( ValidatePlayerModel( pszCurrentModelName ) == false )
 		{
-			pszCurrentModelName = "models/player/ct_sas.mdl";
+			pszCurrentModelName = "models/humans/group03/female_01.mdl";
 		}
 
 		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel %s\n", pszCurrentModelName );
@@ -473,7 +473,7 @@ void CHL2MP_Player::SetPlayerModel( void )
 
 	if ( modelIndex == -1 )
 	{
-		szModelName = "models/player/ct_sas.mdl";
+		szModelName = "models/humans/group03/female_01.mdl";
 		m_iModelType = TEAM_COMBINE;
 
 		char szReturnString[512];
@@ -482,7 +482,7 @@ void CHL2MP_Player::SetPlayerModel( void )
 		engine->ClientCommand ( edict(), szReturnString );
 	}
 
-	SetModel( "models/player/ct_sas.mdl" );
+	SetModel( "models/humans/group03/female_01.mdl" );
 	SetupPlayerSoundsByModel( szModelName );
 
 	m_flNextModelChangeTime = gpGlobals->curtime + MODEL_CHANGE_INTERVAL;
